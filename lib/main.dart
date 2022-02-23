@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  // runApp(const MyApp());
+
+  MaqloSaltoCore maqloSaltoCore = MaqloSaltoCore();
+  runApp(MaterialApp(
+      title: 'Halo Dunia',
+      home: Scaffold(
+        body: Center(
+          child: maqloSaltoCore,
+        ),
+        floatingActionButton: FloatingActionButton(
+          tooltip: 'Refresh',
+          child: Icon(Icons.refresh),
+          onPressed: maqloSaltoCore.state.incrementIndex,
+        ),
+      )));
 }
 
 class MyApp extends StatelessWidget {
@@ -66,6 +80,49 @@ class Heading extends StatelessWidget {
         fontSize: 24.0,
         fontWeight: FontWeight.bold,
       ),
+    );
+  }
+}
+
+class MaqloSaltoCore extends StatefulWidget {
+  final state = MaqloSalto();
+
+  @override
+  State<StatefulWidget> createState() => state;
+}
+
+class MaqloSalto extends State<MaqloSaltoCore> {
+  void incrementIndex() {
+    setState(() {
+      index++;
+    });
+  }
+
+  var nama = 'MAQLOSALTO';
+  var randomWarna = [
+    Colors.red,
+    Colors.purple,
+    Colors.teal,
+    Colors.lime,
+    Colors.indigo,
+    Colors.deepPurple,
+    Colors.cyan,
+    Colors.blue,
+    Colors.yellow
+  ];
+  int index = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(nama,
+            textDirection: TextDirection.ltr,
+            style: TextStyle(
+                fontSize: 45,
+                fontWeight: FontWeight.bold,
+                color: randomWarna[index % randomWarna.length]))
+      ],
     );
   }
 }
