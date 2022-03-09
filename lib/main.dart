@@ -3,29 +3,31 @@ import 'package:flutter/material.dart';
 void main() {
   // runApp(const MyApp());
 
-  MaqloSaltoCore maqloSaltoCore = MaqloSaltoCore();
-  runApp(MaterialApp(
-      title: 'Halo Dunia',
-      home: Scaffold(
-        body: Center(
-          child: maqloSaltoCore,
-        ),
-        floatingActionButton: FloatingActionButton(
-          tooltip: 'Refresh',
-          child: Icon(Icons.refresh),
-          onPressed: maqloSaltoCore.state.incrementIndex,
-        ),
-      )));
+  // MaqloSaltoCore maqloSaltoCore = MaqloSaltoCore();
+  // runApp(MaterialApp(
+  //     title: 'Halo Dunia',
+  //     home: Scaffold(
+  //       body: Center(
+  //         child: maqloSaltoCore,
+  //       ),
+  //       floatingActionButton: FloatingActionButton(
+  //         tooltip: 'Refresh',
+  //         child: Icon(Icons.refresh),
+  //         onPressed: maqloSaltoCore.state.incrementIndex,
+  //       ),
+  //     )));
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  // const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Wisata Awikwok',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -39,11 +41,66 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: Scaffold(
-        body: Center(
-            child: Heading(
-          text: 'askdoadkasodko',
-        )),
+      // home: Scaffold(
+      //   body: Center(
+      //       child: Heading(
+      //     text: 'askdoadkasodko',
+      //   )),
+      // ),
+      // Adding home for Codelab 1
+      home: DetailScreen(),
+    );
+  }
+}
+
+// Codelab 1
+class DetailScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(top: 16.0),
+              child: Text(
+                'Best Switzerland View',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Column(
+                    children: <Widget>[
+                      Icon(Icons.calendar_today),
+                      SizedBox(height: 8.0),
+                      Text('We Are Open'),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Icon(Icons.price_check),
+                      SizedBox(height: 8.0),
+                      Text('Cheaper than last year!'),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Icon(Icons.animation),
+                      SizedBox(height: 8.0),
+                      Text('Astrazeneca Accepted'),
+                    ],
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
