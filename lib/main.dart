@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:first_flutter_test/detail_screen.dart';
 
 void main() {
   // runApp(const MyApp());
@@ -49,59 +50,6 @@ class MyApp extends StatelessWidget {
       // ),
       // Adding home for Codelab 1
       home: DetailScreen(),
-    );
-  }
-}
-
-// Codelab 1
-class DetailScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(top: 16.0),
-              child: Text(
-                'Best Switzerland View',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 16.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      Icon(Icons.calendar_today),
-                      SizedBox(height: 8.0),
-                      Text('We Are Open'),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      Icon(Icons.price_check),
-                      SizedBox(height: 8.0),
-                      Text('Cheaper than last year!'),
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      Icon(Icons.animation),
-                      SizedBox(height: 8.0),
-                      Text('Astrazeneca Accepted'),
-                    ],
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
     );
   }
 }
