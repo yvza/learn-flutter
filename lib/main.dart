@@ -1,3 +1,4 @@
+import 'package:first_flutter_test/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:first_flutter_test/detail_screen.dart';
 
@@ -49,7 +50,8 @@ class MyApp extends StatelessWidget {
       //   )),
       // ),
       // Adding home for Codelab 1
-      home: DetailScreen(),
+      // home: DetailScreen(), //Codelab 2
+      home: MainScreen(), //Codelab 3
     );
   }
 }
