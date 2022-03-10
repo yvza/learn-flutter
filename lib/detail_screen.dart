@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 // Codelab 1
 class DetailScreen extends StatelessWidget {
+  var informationStyle = TextStyle(fontFamily: 'Oxygen');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +18,10 @@ class DetailScreen extends StatelessWidget {
               child: Text(
                 'Best Switzerland View',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Staatliches'),
               ),
             ),
             Container(
@@ -28,21 +33,24 @@ class DetailScreen extends StatelessWidget {
                     children: <Widget>[
                       Icon(Icons.calendar_today),
                       SizedBox(height: 8.0),
-                      Text('We Are Open'),
+                      Text(
+                        'We Are Open',
+                        style: informationStyle,
+                      ),
                     ],
                   ),
                   Column(
                     children: <Widget>[
                       Icon(Icons.price_check),
                       SizedBox(height: 8.0),
-                      Text('Cheaper than last year!'),
+                      Text('Cheaper than last year!', style: informationStyle),
                     ],
                   ),
                   Column(
                     children: <Widget>[
                       Icon(Icons.animation),
                       SizedBox(height: 8.0),
-                      Text('Astrazeneca Accepted'),
+                      Text('Astrazeneca Accepted', style: informationStyle),
                     ],
                   ),
                 ],
