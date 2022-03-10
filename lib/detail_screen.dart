@@ -51,7 +51,7 @@ class DetailScreen extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(16.0),
               child: Text(
-                'Switzerland berlokasi di pusat Eropa Barat dianugerahi tidak hanya keindahan alamnya juga kekayaan budaya dan taraf hidup yang tinggi.',
+                'Switzerland berlokasi di pusat Eropa Barat dianugerahi tidak hanya keindahan alamnya juga kekayaan budaya dan taraf hidup yang tinggi. Negara yang memiliki nama lengkap Konfederasi Swiss (Switzerland Confederation) ini merupakan negara yang menganut sistem pemerintahan  Republik Federal yang kepala negara dan kepala pemerintahannya adalah Presiden. Presiden Swiss dijabat secara bergantian oleh 7 menteri utama dengan masing-masing masa jabatannya selama 1 tahun. Ketujuh menteri utama tersebut dipilih oleh Majelis Federal (Federal Assembly). Ibukota negara Swiss adalah Kota Bern. Swiss memiliki luas wilayah sebesar 41.277 km2 dengan jumlah penduduk sebanyak 8.236.303 jiwa (estimasi Juli 2017). Swiss memiliki 4 bahasa resmi yaitu bahasa Jerman, bahasa Perancis, bahasa Italia dan bahasa Romande. Hal ini dikarenakan Swiss terdiri dari 4 etnis utama yaitu etnis Jerman, Perancis, Italia dan Romande. Penduduk Swiss mayoritas memeluk agama Katolik Roma (37,3%) dan  Protestan (24,9%).',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16.0),
               ),
