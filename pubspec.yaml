@@ -77,10 +77,10 @@ flutter:
   fonts:
   - family: Staatliches
     fonts:
-      - asset: font/Staatliches-Regular.ttf
+      - asset: assets/fonts/Staatliches-Regular.ttf
   - family: Oxygen
     fonts:
-      - asset: font/Oxygen-Regular.ttf
+      - asset: assets/fonts/Oxygen-Regular.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
